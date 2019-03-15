@@ -14,7 +14,7 @@ namespace WishList.Controllers
         {
             _context = context;
         }
-        private ApplicationDbContext _context { get; set; }
+        private readonly ApplicationDbContext _context;
         public IActionResult Index()
         {
             return View("Index", _context.Items.ToList());
